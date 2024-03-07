@@ -13,43 +13,47 @@ body {
 	padding: 0;
 }
 
+div {
+	box-sizing: border-box;
+}
+
 header {
 	display: flex;
 	justify-content: center;
-	padding: 16px 32px;
+	padding: 16px 0;
 }
 
 h1 {
 	font-weight: 100;
-	font-size: 3.5em;
+	font-size: 3.5rem;
 	color: #b9daff;
-	min-width: 400px;
-	text-align: center;
 }
 
 main {
 	display: flex;
 	justify-content: center;
 	box-sizing: border-box;
-	padding: 0 32px;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
-	box-sizing: border-box;
 	width: 680px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
 }
 
 @media (max-width: 680px) {
 	.container {
 		width: 100%;
 	}
-}
 
-.row {
-	display: flex;
-	flex-direction: row;
+	.row {
+		flex-flow: column wrap;
+	}
 }
 
 .input-area {
@@ -57,12 +61,13 @@ main {
 	flex-direction: column;
 	flex: 1;
 
-	padding: 16px;
+	padding: 8px 16px;
 	border-radius: 8px;
 }
 
 label {
 	margin-bottom: 16px;
+	font-size: 1.2rem;
 }
 
 textarea {
@@ -81,12 +86,21 @@ textarea {
 }
 
 .xor {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	font-family: times, sans-serif;
 	font-size: 2.5em;
 	color: #b9daff;
-	margin: 16px;
-	padding-top: 32px;
-	align-self: center;
+	margin: 16px 8px;
+	padding-top: 16px;
+}
+
+@media (max-width: 680px) {
+	.xor {
+		flex-direction: column;
+		margin: 0;
+	}
 }
 
 button {
