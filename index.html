@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>One-Time Pad</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="demo-assets/style.css" />
+
+	<script type="text/javascript" src="one-time-pad.js"></script>
+	<script type="text/javascript" src="demo-assets/script.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<h1>One-Time Pad</h1>
+	</header>
+
+	<main>
+		<div class="container">
+
+			<div class="row">
+				<div class="input-area">
+					<label for="message">
+						Message or cipher
+					</label>
+					<textarea id="message" 
+										placeholder="Enter your message/cipher here"></textarea>
+				</div>
+				<div class="xor">&#8853;</div>
+				<div class="input-area">
+					<label for="key">
+						Key
+					</label>
+					<textarea id="key" 
+										placeholder="Enter your key or leave blank to generate a new key"></textarea>
+				</div>
+			</div>
+
+			<div class="row">
+				<button id="encode-button"
+								onclick="javascript:generate();">
+					Encode/Decode
+				</button>
+			</div>
+
+			<div class="row">
+				<div class="input-area">
+					<label for="cipher">
+						Cipher or decrypted message
+					</label>
+					<textarea id="cipher" 
+										placeholder="Generated cipher/decrypted message will appear here"></textarea>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<span>
+				Background image designed by starline/ 
+				<a href="http://www.freepik.com">Freepik</a>
+			</span>
+		</div>
+	</footer>
+</body>
+
+</html>
